@@ -1,0 +1,14 @@
+<div mat-dialog-content style="width: 100%; height: 100%;">
+    <p>What's your Country? {{data.y.id}}</p>
+    <form [formGroup]="profileForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Country Name</mat-label>
+            <input matInput formControlName="country_name">
+        </mat-form-field>
+        <!-- <button mat-raised-button color="primary" (click)="addCountry()">Submit</button> -->
+        <mat-dialog-actions>
+            <button mat-raised-button color="primary" mat-dialog-close mat-dialog-close="false" (click)="this.v.editCountry(this.profileForm.value)">Submit</button>
+            <button mat-raised-button color="warn" mat-dialog-close mat-dialog-close="true">Cancel</button>
+        </mat-dialog-actions>
+    </form>
+</div>
